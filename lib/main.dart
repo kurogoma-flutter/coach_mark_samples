@@ -47,13 +47,28 @@ class _MyHomePageState extends State<MyHomePage> {
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => ShowCaseWidget(
-                      builder: Builder(
-                        builder: (context) => const ShowcaseviewPage(),
-                      ),
-                    ),
+                  PageRouteBuilder(
+                    pageBuilder: (context, animation, secondaryAnimation) {
+                      return ShowCaseWidget(
+                        builder: Builder(
+                          builder: (context) => const ShowcaseviewPage(),
+                        ),
+                        disableBarrierInteraction: true,
+                        disableMovingAnimation: true,
+                        disableScaleAnimation: true,
+                      );
+                    },
                   ),
+                  // MaterialPageRoute(
+                  // builder: (context) => ShowCaseWidget(
+                  //   builder: Builder(
+                  //     builder: (context) => const ShowcaseviewPage(),
+                  //   ),
+                  //   disableBarrierInteraction: true,
+                  //   disableMovingAnimation: true,
+                  //   disableScaleAnimation: true,
+                  // ),
+                  // ),
                 );
               },
               child: const Text('showcaseview'),
