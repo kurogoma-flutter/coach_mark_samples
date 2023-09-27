@@ -36,7 +36,10 @@ class _ShowcaseviewPageState extends State<ShowcaseviewPage> {
             width: 150,
             nip: BubbleNip.rightTop,
             position: TooltipPosition.bottom,
-            child: const Icon(Icons.star),
+            child: IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.menu),
+            ),
           ),
         ],
       ),
@@ -53,7 +56,10 @@ class _ShowcaseviewPageState extends State<ShowcaseviewPage> {
         width: 160,
         message: '右下のボタン',
         nip: BubbleNip.rightBottom,
-        child: const Icon(Icons.star),
+        child: FloatingActionButton(
+          onPressed: () {},
+          child: const Icon(Icons.add),
+        ),
       ),
     );
   }
@@ -107,12 +113,12 @@ class ShowCaseItem extends StatelessWidget {
 // return Scaffold(
 //       appBar: AppBar(
 //         title: const Text('Showcaseview'),
-//         actions: [
-//           IconButton(
-//             onPressed: () {},
-//             icon: const Icon(Icons.menu),
-//           ),
-//         ],
+        // actions: [
+        //   IconButton(
+        //     onPressed: () {},
+        //     icon: const Icon(Icons.menu),
+        //   ),
+        // ],
 //       ),
 //       body: const Center(
 //         child: Icon(Icons.star),

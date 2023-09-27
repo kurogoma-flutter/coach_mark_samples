@@ -1,4 +1,5 @@
 import 'package:coach_mark_samples/showcaseview_page.dart';
+import 'package:coach_mark_samples/tutorial_coach_mark_page.dart';
 import 'package:flutter/material.dart';
 import 'package:showcaseview/showcaseview.dart';
 
@@ -58,7 +59,13 @@ class _MyHomePageState extends State<MyHomePage> {
               child: const Text('showcaseview'),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const TutorialCoachMarkPage(),
+                  ),
+                );
+              },
               child: const Text('tutorial_coach_mark'),
             ),
             ElevatedButton(
