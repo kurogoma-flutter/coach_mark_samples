@@ -59,16 +59,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       );
                     },
                   ),
-                  // MaterialPageRoute(
-                  // builder: (context) => ShowCaseWidget(
-                  //   builder: Builder(
-                  //     builder: (context) => const ShowcaseviewPage(),
-                  //   ),
-                  //   disableBarrierInteraction: true,
-                  //   disableMovingAnimation: true,
-                  //   disableScaleAnimation: true,
-                  // ),
-                  // ),
                 );
               },
               child: const Text('showcaseview'),
@@ -76,8 +66,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const TutorialCoachMarkPage(),
+                  PageRouteBuilder(
+                    pageBuilder: (context, animation, secondaryAnimation) {
+                      return const TutorialCoachMarkPage();
+                    },
                   ),
                 );
               },
@@ -86,10 +78,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ElevatedButton(
               onPressed: () {},
               child: const Text('flutter_intro'),
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text('overlay_tooltip'),
             ),
           ],
         ),
