@@ -61,7 +61,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 );
               },
-              child: const Text('showcaseview'),
+              child: const Padding(
+                padding: EdgeInsets.all(12),
+                child: Text(
+                  'showcaseview',
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
             ),
             ElevatedButton(
               onPressed: () {
@@ -73,11 +79,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 );
               },
-              child: const Text('tutorial_coach_mark'),
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text('flutter_intro'),
+              child: const Padding(
+                padding: EdgeInsets.all(12),
+                child: Text(
+                  'tutorial_coach_mark',
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
             ),
           ],
         ),
